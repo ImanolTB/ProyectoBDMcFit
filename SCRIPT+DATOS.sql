@@ -175,6 +175,7 @@ CREATE TABLE `pagos` (
   `fechaPago` date DEFAULT NULL,
   `tipoPago` varchar(30) DEFAULT NULL,
   `idSocio` int NOT NULL,
+  `importe` int NOT NULL
   PRIMARY KEY (`idPago`),
   KEY `fk_pagos` (`idSocio`),
   CONSTRAINT `fk_pagos` FOREIGN KEY (`idSocio`) REFERENCES `socio` (`idSocio`),
